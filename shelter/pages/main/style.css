@@ -19,7 +19,7 @@ html {
     padding: 80px 40px 100px 40px;
   } */
 
-  .first-background {
+  .radial-background {
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     height: 908px;
   }
@@ -373,6 +373,76 @@ html {
   }
 
   /*Help styles end*/
+
+  /*In-addition styles start*/
+  .in-addition {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 182px 100px 182px;
+  }
+
+  .in-addition__title {
+    font-family: 'Tinos', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    color: #545454;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .in-addition__desc {
+    font-family: 'Tinos', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #545454;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    width: 307px;
+    margin-bottom: 20px;
+  }
+
+  .in-addition__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    width: 349px;
+  
+    background: #F1CDB3;
+    border-radius: 9px;
+
+    padding: 10px 15px;
+  }
+
+  .in-addition__card--number {
+    font-family: 'Tinos', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #545454;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+
+    text-decoration: none;
+  }
+
+  .in-addition__desc--italic {
+    width: 380px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;    
+    color: #B2B2B2;
+  }
+
+
+  /*In-addition styles end*/
 
 
 
