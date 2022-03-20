@@ -330,5 +330,49 @@ html {
 
   /*Friends styles end*/
 
+  /*Help styles start*/
+
+  .help {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px 100px 40px;
+  }
+
+  .help__title {
+    font-family: 'Tinos', serif;
+    font-size: 35px;
+    color: #545454;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    line-height: 130%;
+    padding-bottom: 60px;   
+    text-align: center;
+  }
+
+  .help__cards--1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1026px;
+    margin-bottom: 55px;
+  }
+
+  .help__cards--2 {
+    display: flex;
+    justify-content: space-between;
+    width: 858px;
+    /* padding: 0px 171px; */
+  }
+
+  .help__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+  }
+
+  /*Help styles end*/
+
 
 
