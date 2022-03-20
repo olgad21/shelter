@@ -21,6 +21,9 @@ html {
 
   .radial-background {
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  }
+
+  .first {
     height: 908px;
   }
 
@@ -443,6 +446,65 @@ html {
 
 
   /*In-addition styles end*/
+
+  .footer {
+      padding: 40px 40px 0px 40px;
+      display: flex;
+      justify-content: space-between;
+      height: 350px;
+  }
+
+  .footer__title--1 {
+    font-family: 'Tinos', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    color: #FFFFFF;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+  }
+
+  .footer__title--2 {
+    font-family: 'Tinos', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    color: #FFFFFF;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    margin-bottom: 34px;
+  }
+
+  .footer__text {
+      margin-right: 160px;
+      margin-top: 16px;
+  }
+
+  .footer__link--1 {
+      display: flex;
+      margin-bottom: 40px;
+      text-decoration: none;
+  }
+
+  .footer__link--2 {
+    display: flex;
+    margin-bottom: 32px;
+    text-decoration: none;
+}
+
+  .footer__link--text {
+    font-family: 'Tinos', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #F1CDB3;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    margin-left: 20px;
+  }
+
+
 
 
 
