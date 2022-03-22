@@ -23,10 +23,6 @@ html {
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   }
 
-  .first {
-    height: 908px;
-  }
-
   /*Header styles start */
   .header {
     width: 100%;
@@ -82,21 +78,29 @@ html {
   .header__link {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    color:#FAFAFA;
+    color:#CDCDCD;
     text-decoration: none;
     transition: color 0.3s;
     font-weight: 400;
   }
   
-  .header__link:hover, .header__link:focus, .header__link__active {
+  .interactive:hover {
+    color: #FAFAFA;
+  } 
   
-    color: #9D8665;
+  .interactive:active {
+    color: #FAFAFA;
+    border-bottom: 3px #F1CDB3 solid;
   }
 
   .not-only {
     display: flex;
     justify-content: space-between;
     padding: 0px 40px;
+  }
+
+  .not-only__img {
+    display: inline-flex;
   }
 
   .not-only__text {
@@ -149,6 +153,10 @@ html {
     border-radius: 100px;
   }
 
+  .not-only__button:hover{
+    background: #FDDCC4;
+  }
+
   /*Header styles end */
 
 
@@ -196,11 +204,11 @@ html {
   }
 
   .friends {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 80px 40px 100px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px 100px 40px;
   }
 
   .friends__title {
@@ -235,6 +243,10 @@ html {
     width: 270px;
     align-items: center;
     background-color: #FAFAFA;
+  }
+
+  .friends__card:hover .friends__card--img{
+    background-color: #F6F6F6;
   }
 
   .friends__card--name {
@@ -272,6 +284,11 @@ html {
     margin-bottom: 30px;
   }
 
+  .friends__card--button:hover{
+    background: #FDDCC4;
+    border-color: #FDDCC4;
+  }
+
   .friends__button {
     width: 261px;
     height: 52px;
@@ -291,6 +308,10 @@ html {
     background: #F1CDB3;
     border-radius: 100px;
     padding: 15px 45px;
+  }
+
+  .friends__button:hover {
+    background: #FDDCC4;
   }
 
   .friends__slider--circle {
@@ -314,21 +335,26 @@ html {
     border-radius: 100px;
   }
 
+  .friends__slider--circle:hover {
+    background: #FDDCC4;
+    border-color: #FDDCC4;
+  }
+
+  .friends__slider--circle:disabled {
+    border-color: #CDCDCD;
+  }
+
   .friends__slider--arrow {
     color: #292929;
-    width: 5%;
     cursor: pointer;
     transition: 0.6s ease;
-    margin-right: 30%
+    transform: rotate(-180deg);
   }
 
   .friends__slider--arrow--right {
     color: #292929;
-    width: 5%;
     cursor: pointer;
     transition: 0.6s ease;
-    transform: rotate(-180deg);
-    margin-left: 30%;
   }
 
   /*Friends styles end*/
@@ -433,6 +459,10 @@ html {
     padding: 10px 15px;
   }
 
+  .in-addition__card:hover {
+    background: #FDDCC4;
+  }
+
   .in-addition__card--number {
     font-family: 'Tinos', serif;
     font-style: normal;
@@ -462,7 +492,10 @@ html {
       padding: 40px 40px 0px 40px;
       display: flex;
       justify-content: space-between;
-      height: 350px;
+  }
+
+  .footer__img {
+    display: inline-flex;
   }
 
   .footer__title--1 {
@@ -487,10 +520,17 @@ html {
     margin-bottom: 34px;
   }
 
-  .footer__text {
+  .footer__text--1 {
       margin-right: 160px;
       margin-top: 16px;
+      width: 278px;
   }
+
+  .footer__text--2 {
+    margin-right: 160px;
+    margin-top: 16px;
+    width: 302px;
+}
 
   .footer__link--1 {
       display: flex;

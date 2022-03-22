@@ -31,6 +31,7 @@ html {
   .header__logo {
       display: flex;
       flex-direction: column;
+      text-decoration: none;
   }
 
   .header__logo--main {
@@ -73,9 +74,13 @@ html {
     font-weight: 400;
   }
   
-  .header__link:hover, .header__link:focus, .header__link__active {
+  .interactive:hover {
+    color: #292929;
+  } 
   
-    color: #9D8665;
+  .interactive:active {
+    color: #292929;
+    border-bottom: 3px #F1CDB3 solid;
   }
 
     /*Header styles end */
@@ -128,6 +133,10 @@ html {
         align-items: center;
         background-color: #FAFAFA;
       }
+
+      .our-pets__card:hover .our-pets__card--img{
+        background-color: #F6F6F6;
+      }
     
       .our-pets__card--name {
         font-family: 'Tinos', serif;
@@ -162,6 +171,11 @@ html {
         text-decoration: none;
         
         margin-bottom: 30px;
+      }
+
+      .our-pets__card--button:hover{
+        background: #FDDCC4;
+        border-color: #FDDCC4;
       }
     
       .our-pets__button {
@@ -198,6 +212,16 @@ html {
         align-items: center;
         justify-content: center;
       }
+
+      .our-pets__slider--circle:hover {
+        background: #FDDCC4;
+        border-color: #FDDCC4;
+      }
+
+      .our-pets__slider--circle:disabled {
+        border-color: #CDCDCD;
+      }
+    
     
       .our-pets__slider--arrow {
         color: #292929;
@@ -231,10 +255,13 @@ html {
       }
 
     .footer {
-        padding: 40px 40px 0px 40px;
-        display: flex;
-        justify-content: space-between;
-        height: 350px;
+    padding: 40px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    }
+  
+    .footer__img {
+      display: inline-flex;
     }
   
     .footer__title--1 {
@@ -259,9 +286,16 @@ html {
       margin-bottom: 34px;
     }
   
-    .footer__text {
+    .footer__text--1 {
         margin-right: 160px;
         margin-top: 16px;
+        width: 278px;
+    }
+
+    .footer__text--2 {
+        margin-right: 160px;
+        margin-top: 16px;
+        width: 302px;
     }
   
     .footer__link--1 {

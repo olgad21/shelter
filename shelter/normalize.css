@@ -200,6 +200,8 @@
   [type="reset"],
   [type="submit"] {
     -webkit-appearance: button;
+
+    background: transparent;
   }
   
   /**
