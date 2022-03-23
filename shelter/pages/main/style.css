@@ -93,6 +93,11 @@ html {
     border-bottom: 3px #F1CDB3 solid;
   }
 
+  .active {
+    color: #FAFAFA;
+    border-bottom: 3px #F1CDB3 solid;
+  }
+
   .not-only {
     display: flex;
     justify-content: space-between;
@@ -156,6 +161,7 @@ html {
   .not-only__button:hover{
     background: #FDDCC4;
   }
+
 
   /*Header styles end */
 

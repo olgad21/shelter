@@ -15,17 +15,29 @@ html {
     margin: 0 auto;
   }
 
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+  }
+
   /*Header styles start */
   .header {
-    width: 100%;
     top: 0;
-    left: 0;
-    background: #FFFFFF;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 30px 40px;
+  }
+
+
+  main {
+    padding-top: 120px;
   }
 
   .header__logo {
@@ -79,6 +91,11 @@ html {
   } 
   
   .interactive:active {
+    color: #292929;
+    border-bottom: 3px #F1CDB3 solid;
+  }
+
+  .active {
     color: #292929;
     border-bottom: 3px #F1CDB3 solid;
   }
