@@ -241,9 +241,10 @@ html {
   }
 
   .friends__cards {
+    order: 2;
     display: flex;
     width: 990px;
-    justify-content: space-between;
+    overflow: hidden;
   }
 
   .friends__card {
@@ -251,12 +252,18 @@ html {
     flex-direction: column;
     align-items: center;
     width: 270px;
+    margin-right: 90px;
     align-items: center;
     background-color: #FAFAFA;
   }
 
-  .friends__card:hover .friends__card--img{
+  .friends__card:hover {
     background-color: #F6F6F6;
+  }
+
+  .friends__card:hover .friends__card--button{
+    background: #FDDCC4;
+    border-color: #FDDCC4;
   }
 
   .friends__card--name {
@@ -325,7 +332,8 @@ html {
     background: #FDDCC4;
   }
 
-  .friends__slider--circle {
+  .friends__slider--circle-left {
+    order: 1;
     width: 50px;
     height: 50px;
     border: 1px solid #666666;
@@ -346,14 +354,41 @@ html {
     border-radius: 100px;
   }
 
-  .friends__slider--circle:hover {
+  .friends__slider--circle-right {
+    order: 3;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #666666;
+    border-radius: 50%;
+    text-align: center;
+    transition: color 0.3s;
+      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+    width: 52px;
+    height: 52px;
+
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+  }
+
+  .friends__slider--circle-right:hover {
     background: #FDDCC4;
     border-color: #FDDCC4;
   }
 
-  .friends__slider--circle:disabled {
-    border-color: #CDCDCD;
+  .friends__slider--circle-left:hover {
+    background: #FDDCC4;
+    border-color: #FDDCC4;
   }
+
+  /* .friends__slider--circle-right, .friends__slider--circle-left:disabled {
+    border-color: #CDCDCD;
+  } */
 
   .friends__slider--arrow {
     color: #292929;
@@ -572,7 +607,7 @@ html {
     margin-left: 20px;
   }
 
-
+  /* Adaptivity for tablets start*/
   @media screen and (max-width: 1279px) {
     .wrapper{
       max-width: 1280px;
@@ -632,8 +667,8 @@ html {
       width: 580px;
     }
 
-    .friends__card:last-child {
-      display: none;
+    .friends__card {
+      margin-right: 40px;
     }
 
     .help {
@@ -674,6 +709,7 @@ html {
       padding: 29px 64px 0px 64px;
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
     }
 
@@ -693,19 +729,228 @@ html {
 
     .footer__img {
       margin-top: 25px;
-      margin-left: 170px;
     }
   }
 
-  @media (max-width: 767px) {
-    .wrapper{
-      max-width: 768px;
-    }
-  }
+  /* Adaptivity for mobile start*/
 
-  @media (max-width: 319px) {
+  @media screen and (max-width: 767px) {
     .wrapper{
-      max-width: 320px;
+      max-width: 767px;
+    }
+    .header__list {
+      display: none;
+    }
+
+    .header__wrapper {
+      padding: 30px 53px 60px 10px;
+    }
+
+    .not-only {
+      flex-direction: column;
+      padding: 0px 10px 0px 10px;
+    }
+
+    .not-only__text {
+      width: 300px;
+      margin-bottom: 105px;
+      padding-top: 0px;
+      align-items: center;
+    }
+
+    .not-only__title {
+      font-size: 25px;
+      width: 200px;
+      text-align: center;
+      letter-spacing: 0.09em;
+    }
+
+    .not-only__desc {
+      width: 300px;
+      text-align: center;
+    }
+
+    .not-only__button {
+      margin-left: 0px;
+    }
+
+    .not-only__img {
+      justify-content: flex-end;
+    }
+
+    .about {
+      flex-direction: column-reverse;
+      padding: 42px 10px;
+      align-items: center;
+    }
+
+    .about__title {
+      padding-top: 0px;
+      font-size: 25px;
+      width: 268px;
+      text-align: center;
+      letter-spacing: 0.09em;
+    }
+
+    .about__desc {
+      text-align: justify;
+    }
+
+    .about__text {
+      padding-bottom: 17px;
+      width: 270px;
+    }
+
+    .friends {
+      padding: 37px 10px;
+    }
+
+    .friends__title {
+      padding: 0px 0px 42px 0px;
+      letter-spacing: 0.1em;
+      font-size: 25px;
+    }
+
+    .friends__slider {
+      flex-wrap: wrap;
+      width: 270px;
+      justify-content: center;
+      padding-bottom: 42px;
+    }
+
+    .friends__cards {
+      order: 1;
+      width: 270px;
+      margin-bottom: 20px;
+    }
+
+    .friends__slider--circle-left {
+      order: 2;
+      margin-right: 80px;
+    }
+
+    .friends__slider--circle-right {
+      order: 3;
+    }
+
+    .help {
+      padding: 45px 15px 37px 15px;
+    }
+
+    .help__title {
+      font-size: 25px;
+      padding-bottom: 40px;
+      line-height: 127%;
+    }
+
+    .help__card {
+      margin-left: 0px;
+      width: 130px;
+      margin-bottom: 28px;
+    }
+
+    .help__card--desc {
+      margin-top: 15px;
+      font-size: 15px;
+    }
+
+    .help__cards {
+      width: 290px;
+      justify-content: space-between;
+    }
+
+    .help__card:last-child {
+      margin-bottom: 0px;
+    }
+
+    .second-row-start {
+      margin-left: 0px;
+    }
+
+    .in-addition {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 42px 20px;
+    }
+
+    .in-addition__title {
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 23px;
+    }
+
+    .in-addition__text {
+      width: 300px;
+      margin-bottom: 42px;
+    }
+
+    .in-addition__desc {
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .in-addition__desc--italic {
+      margin: 0 10px;
+      text-align: justify;
+    }
+
+    .in-addition__img {
+      padding-top: 0px;
+      margin-right: 0px;
+    }
+
+    .in-addition__card {
+      width: 281px;
+      margin-left: 10px;
+    }
+
+    .in-addition__card--number {
+      font-size: 15px;
+    }
+
+    .footer {
+      padding: 29px 10px 0px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .footer__text--1 {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer__text--2 {
+      margin: 0;
+    }
+
+    .footer__title--2 {
+      letter-spacing: 0.1em;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .footer__link--2 {
+      margin-bottom: 41px;
+    }
+
+    .footer__img {
+      margin-top: 0px;
+    }
+
+    .footer__title--1 {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    .footer__title--2 {
+      font-size: 25px;
+      width: 295px;
+      text-align: center;
     }
   }
 

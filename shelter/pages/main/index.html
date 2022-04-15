@@ -45,11 +45,12 @@
                     <a href="#friends" class="not-only__button" target="_blank">Make a friend</a>
                 </div>
                 <div class="not-only__img">
-                    <img srcset="../../assets/images/start-screen-puppy-768 569w,
+                    <img srcset="../../assets/images/start-screen-puppy-320 260w,
+                                 ../../assets/images/start-screen-puppy-768.png 569w,
                                  ../../assets/images/start-screen-puppy.png 698w"
-                         sizes="(max-width: 1279px) 569px,
-                                (min-width: 1280px) 698px,
-                                (max-width: 768px) 569px"
+                         sizes="(min-width: 1280px) 698px,
+                                (min-width: 768px) 569px,
+                                (max-width: 767px) 260px"
                          src="../../assets/images/start-screen-puppy.png" alt="Puppy">
                 </div>
             </section>
@@ -59,7 +60,11 @@
         <section>
             <div class="about wrapper">
                 <div class="about__img">
-                    <img src="../../assets/images/about-pets.png" alt="Pets">
+                    <img srcset="../../assets/images/about-pets-320.png 260w,
+                                 ../../assets/images/about-pets.png 300w"
+                         sizes="(max-width: 767px) 260px,
+                                (min-width: 768px) 300px"
+                         src="../../assets/images/about-pets.png" alt="Pets">
                 </div>
                 <div class="about__text">
                     <h2 class="about__title">About the shelter “Cozy House”</h2>
@@ -72,7 +77,7 @@
             <div class="friends wrapper">
                 <h2 class="friends__title">Our friends who <br> are looking for a house</h2>
                 <div class="friends__slider">
-                    <button class="friends__slider--circle">
+                    <button class="friends__slider--circle-left">
                         <span class="friends__slider--arrow">&#10142;</span>
                     </button>
                     <div class="friends__cards">
@@ -98,7 +103,7 @@
                             <button class="friends__card--button">Learn more</button>
                         </div>
                     </div>
-                    <button class="friends__slider--circle">
+                    <button class="friends__slider--circle-right">
                         <span class="friends__slider--arrow--right">&#10142;</span>
                     </button>
                 </div>
@@ -111,55 +116,91 @@
                 <div class="help__cards">
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-pet-food.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-pet-food.svg 48w,
+                                         ../../assets/icons/icon-pet-food-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px"
+                                 src="../../assets/icons/icon-pet-food.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Pet food</p>
                     </div>
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-transportation.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-transportation.svg 48w,
+                                         ../../assets/icons/icon-transportation-320.svg 40w"
+                                sizes="(max-width: 767px) 40px,
+                                       (min-width: 768px) 48px"
+                                src="../../assets/icons/icon-transportation.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Transportation</p>
                     </div>
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-toys.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-toys.svg 48w,
+                                         ../../assets/icons/icon-toys-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px" 
+                                 src="../../assets/icons/icon-toys.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Toys</p>
                     </div>
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-bowls-and-cups.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-bowls-and-cups.svg 48w,
+                                         ../../assets/icons/icon-bowls-and-cups-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px"
+                                 src="../../assets/icons/icon-bowls-and-cups.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Bowls and cups</p>
                     </div>
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-shampoos.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-shampoos.svg 48w,
+                                         ../../assets/icons/icon-shampoos-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px"
+                                 src="../../assets/icons/icon-shampoos.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Shampoos</p>
                     </div>
                     <div class="help__card second-row-start">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-vitamins.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-vitamins.svg 48w,
+                                         ../../assets/icons/icon-vitamins-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px"
+                                 src="../../assets/icons/icon-vitamins.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Vitamins</p>
                     </div>
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-medicines.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-medicines.svg 48w,
+                                         ../../assets/icons/icon-medicines-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px"
+                                 src="../../assets/icons/icon-medicines.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Medicines</p>
                     </div>
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-collars-leashes.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-collars-leashes.svg 48w,
+                                         ../../assets/icons/icon-collars-leashes-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px"
+                                 src="../../assets/icons/icon-collars-leashes.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Collars / leashes</p>
                     </div>
                     <div class="help__card">
                         <div class="help__card--img">
-                            <img src="../../assets/icons/icon-sleeping-area.svg" alt="Icon">
+                            <img srcset="../../assets/icons/icon-sleeping-area.svg 48w,
+                                         ../../assets/icons/icon-sleeping-area-320.svg 40w"
+                                 sizes="(max-width: 767px) 40px,
+                                        (min-width: 768px) 48px"
+                                 src="../../assets/icons/icon-sleeping-area.svg" alt="Icon">
                         </div>
                         <p class="help__card--desc">Sleeping areas</p>
                     </div>
@@ -169,7 +210,11 @@
         <section class="grey-background">
             <div class="in-addition wrapper">
                 <div class="in-addition__img">
-                    <img src="../../assets/images/donation-dog.png" alt="Dog">
+                    <img srcset="../../assets/images/donation-dog.png 505w,
+                                 ../../assets/images/donation-dog-320.png 260w"
+                         sizes="(max-width: 767px) 260px,
+                                (min-width: 768px) 505px"
+                         src="../../assets/images/donation-dog.png" alt="Dog">
                 </div>
                 <div class="in-addition__text">
                     <h2 class="in-addition__title">You can also <br> make a donation</h2>
@@ -187,7 +232,7 @@
     <footer class="radial-background" id="contacts">
         <div class="footer wrapper">
             <div class="footer__text--1">
-                <h2 class="footer__title--1">For questions <br> and suggestions</h2>
+                <h2 class="footer__title--1">For questions and suggestions</h2>
                 <a href="mailto:email@shelter.com" class="footer__link--1">
                     <img src="../../assets/icons/icon-email.svg" alt="Icon">
                     <p class="footer__link--text">email@shelter.com</p>
@@ -198,7 +243,7 @@
                 </a>
             </div>
             <div class="footer__text--2">
-                <h2 class="footer__title--2">We are waiting <br> for your visit</h2>
+                <h2 class="footer__title--2">We are waiting for your visit</h2>
                 <a href="https://goo.gl/maps/akWnKwNycSxgcnsu8" class="footer__link--2" target="_blank">
                     <img src="../../assets/icons/pin.png" alt="Icon">
                     <p class="footer__link--text">1 Central Street, Boston (entrance from the store)</p>
@@ -209,7 +254,11 @@
                 </a>
             </div>
             <div class="footer__img">
-                <img src="../../assets/images/footer-puppy.png" alt="Puppy">
+                <img srcset="../../assets/images/footer-puppy.png 300w,
+                             ../../assets/images/footer-puppy-320.png 260w"
+                    sizes="(max-width: 767px) 260px,
+                           (min-width: 768px) 300px"
+                    src="../../assets/images/footer-puppy.png" alt="Puppy">
             </div>
         </div>
     </footer>
