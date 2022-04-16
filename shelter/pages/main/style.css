@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
   }
 
+body._lock {
+  overflow: hidden;
+}
+
   *, *::before, *::after {
     box-sizing: inherit;
   }
@@ -28,6 +32,7 @@ html {
     width: 100%;
     top: 0;
     left: 0;
+    position: static;
   }
     
 
@@ -60,7 +65,7 @@ html {
     color: #FFFFFF;
     font-weight: 100;
     line-height: 15px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     margin-left: 4px;
   }
 
@@ -83,6 +88,14 @@ html {
     text-decoration: none;
     transition: color 0.3s;
     font-weight: 100;
+  }
+  
+  .header__burger {
+    display: none;
+  }
+
+  .header__burger-logo {
+    display: none;
   }
   
   .interactive:hover {
@@ -740,12 +753,132 @@ html {
     .wrapper{
       max-width: 767px;
     }
+
+    /*Burger menu start*/
+    .header__nav {
+      /* display: none; */
+      position: fixed;
+      height: 100%;
+      top: 0;
+      right: 0;
+      width: 320px;
+      background-color: #292929;
+      z-index: 1;
+      padding: 256px 38px;
+      transform: translate(-100%, -100%);
+    }
+
+
     .header__list {
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+      justify-content: center;
+      overflow: auto;
+    }
+
+    .header__item {
+      margin-bottom: 55px;
+      text-align: center;
+    }
+
+    .header__link {
+      color: #CDCDCD;
+      font-size: 32px;
+    }
+
+    .header__burger {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 22px;
+      cursor: pointer; 
+      z-index: 2;
+      margin-left: 43px;
+    }
+
+    .header__burger._active {
+      transform: rotate(90deg);
+    }
+
+    .header__nav._active {
+      transform: translate(0px, 0px);
+    }
+
+    .header__burger-logo {
       display: none;
     }
 
+    .header__burger-logo._active {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    .header__burger-logo--main {
+      font-family: 'Tinos', serif;
+      font-size: 32px;
+      color: #F1CDB3;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      line-height: 110%;
+      padding-bottom: 10px;
+    }
+  
+    .header__burger-logo--sub {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      color: #FFFFFF;
+      font-weight: 100;
+      line-height: 15px;
+      letter-spacing: 0.008em;
+      margin-left: 4px;
+    }
+
+    .header__burger span,
+    .header__burger::before,
+    .header__burger::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-color: #F1CDB3;
+      height: 2px;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+      content: "";
+    }
+
+    .header__burger::before {
+      top: 0;
+    }
+
+    .header__burger::after {
+      bottom: 0;
+    }
+
+    .header__burger span {
+      top: 50%;
+      transform: translate(0px, -50%);
+    }
+
+
+    /*Burger menu end*/
+
+    .header__wrapper._active {
+      padding: 30px 50px 60px 10px;
+      justify-content: end;
+      flex-wrap: nowrap;
+    }
+
     .header__wrapper {
-      padding: 30px 53px 60px 10px;
+      padding-left: 10px;
+      padding-right: 50px;
+    }
+
+    .header__logo._active {
+      display: none;
     }
 
     .not-only {
