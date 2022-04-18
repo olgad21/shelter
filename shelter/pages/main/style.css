@@ -776,7 +776,7 @@ body._lock {
       width: 320px;
       background-color: #292929;
       z-index: 20;
-      padding: 256px 38px;
+      padding: 256px 38px 0;
       transform: translate(-100%, -100%);
     }
 
