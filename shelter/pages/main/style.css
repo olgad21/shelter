@@ -620,6 +620,18 @@ body._lock {
     margin-left: 20px;
   }
 
+  .overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+  }
+
   /* Adaptivity for tablets start*/
   @media screen and (max-width: 1279px) {
     .wrapper{
@@ -763,7 +775,7 @@ body._lock {
       right: 0;
       width: 320px;
       background-color: #292929;
-      z-index: 1;
+      z-index: 20;
       padding: 256px 38px;
       transform: translate(-100%, -100%);
     }
@@ -793,7 +805,7 @@ body._lock {
       width: 30px;
       height: 22px;
       cursor: pointer; 
-      z-index: 2;
+      z-index: 21;
       margin-left: 43px;
     }
 
@@ -812,7 +824,7 @@ body._lock {
     .header__burger-logo._active {
       display: flex;
       flex-direction: column;
-      z-index: 2;
+      z-index: 21;
     }
 
     .header__burger-logo--main {
@@ -861,6 +873,10 @@ body._lock {
     .header__burger span {
       top: 50%;
       transform: translate(0px, -50%);
+    }
+
+    .overlay._active {
+      display: block;
     }
 
 
