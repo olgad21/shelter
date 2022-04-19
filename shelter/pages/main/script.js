@@ -6,6 +6,7 @@ const logoBurger = document.querySelector('.header__burger-logo');
 const headerWrapper = document.querySelector('.header__wrapper');
 const overlay = document.querySelector('.overlay');
 
+
 iconBurger.addEventListener('click', function(e){
     menuBurger.classList.toggle('_active');
     iconBurger.classList.toggle('_active');
