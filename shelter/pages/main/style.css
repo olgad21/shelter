@@ -260,6 +260,12 @@ body._lock {
     overflow: hidden;
   }
 
+  .friends__carousel {
+    transform: translate(0, 0);
+    display: flex;
+    width: 990px;
+  }
+
   .friends__card {
     display: flex;
     flex-direction: column;
@@ -270,8 +276,36 @@ body._lock {
     background-color: #FAFAFA;
   }
 
+  @keyframes move-right {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-109%, 0);   
+    }
+  }
+
+  .transition-right {
+    animation-name: move-right;
+  }
+
+  @keyframes move-left {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(109%, 0);   
+    }
+  }
+
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 0.1s;
+  }
+
   .friends__card:hover {
     background-color: #F6F6F6;
+    animation-duration: 0.3s;
   }
 
   .friends__card:hover .friends__card--button{
@@ -693,8 +727,16 @@ body._lock {
       width: 580px;
     }
 
+    .friends__carousel {
+      width: 580px;
+    }
+
     .friends__card {
       margin-right: 40px;
+    }
+
+    .friends__card:last-child{
+      display: none;
     }
 
     .help {
@@ -976,6 +1018,15 @@ body._lock {
       order: 1;
       width: 270px;
       margin-bottom: 20px;
+    }
+
+    .friends__carousel {
+      width: 270px;
+    }
+
+    .friends__card:first-child,
+    .friends__card:last-child {
+      display: none;
     }
 
     .friends__slider--circle-left {
