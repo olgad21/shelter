@@ -452,6 +452,91 @@ body._lock {
 
   /*Friends styles end*/
 
+  /*Popup styles start*/
+.friends__popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0; /*will change with js*/
+  visibility: hidden; /*will change with js*/
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease 0s;
+}
+
+.friends__popup._active {
+  opacity: 1; 
+  visibility: visible;
+}
+
+.friends__popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.friends__popup--body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friends__popup--content {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 900px;
+  margin: auto 190px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  opacity: 1; /*will change with js*/
+  transform: translateX(0px); /*will change with js*/
+}
+
+.friends__popup--close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  text-decoration: none;
+  color: grey;
+}
+
+.friends__popup--text {
+  font-family: 'Tinos', serif;
+  width: 350px;
+  margin: 50px 20px 0 0;
+}
+
+.friends__popup--title {
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.friends__popup--subtitle {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.friends__popup--description {
+  margin: 40px 0;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+  /*Popup styles end*/
+
   /*Help styles start*/
 
   .help {

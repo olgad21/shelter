@@ -16,6 +16,8 @@ iconBurger.addEventListener('click', function(e){
     overlay.classList.toggle('_active');
 });
 
+overlay.addEventListener('click', closeMenu);
+
 const menuLinks = document.querySelectorAll('.header__link');
 menuLinks.forEach(menuLink => menuLink.addEventListener('click', closeMenu));
 function closeMenu () {

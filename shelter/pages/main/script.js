@@ -19,8 +19,12 @@ iconBurger.addEventListener('click', function(e){
     overlay.classList.toggle('_active');
 });
 
+overlay.addEventListener('click', closeMenu);
+
 const menuLinks = document.querySelectorAll('.header__link');
+
 menuLinks.forEach(menuLink => menuLink.addEventListener('click', closeMenu));
+
 function closeMenu () {
     menuBurger.classList.remove('_active');
     iconBurger.classList.remove('_active');
@@ -71,7 +75,7 @@ function generateImages(newPets) {
             petImage.src = `${petsData[randomIndex].img}`; 
             let petName = petCards[i].getElementsByTagName('p')[0];  //Find name in the card
             petName.innerHTML = `${petsData[randomIndex].name}`;
-            petsData.splice(randomIndex, 1);
+            petsData.splice(randomIndex, 1); //So that images do not to duplicate on same slide
             displayedPetNames.push(petName.innerHTML);
         }
     };
@@ -113,3 +117,25 @@ loadData()
         pets = loadedData;
         generateImages(pets);
     });
+
+//Create popup
+
+const popUp = document.querySelector('.friends__popup');
+
+console.log(popUp);
+
+Array.from(petCards).forEach(petCard => petCard.addEventListener('click', openPopup));
+
+function openPopup() {
+    popUp.classList.add('_active');
+    document.body.classList.add('_lock');
+};
+
+document.querySelector('.friends__popup__area').addEventListener('click', closePopup);
+
+function closePopup() {
+    popUp.classList.remove('_active');
+    document.body.classList.remove('_lock');
+}
+
+
