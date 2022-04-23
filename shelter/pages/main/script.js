@@ -71,6 +71,7 @@ function generateImages(newPets) {
         if (window.getComputedStyle(petCards[i], null).display !== 'none') {
             let randomIndex = Math.floor(Math.random() * petsData.length);
 
+            petCards[i].dataset.petname = `${petsData[randomIndex].name}`; //add data attribute to each card
             let petImage = petCards[i].getElementsByTagName('img')[0]; //Find image in the card
             petImage.src = `${petsData[randomIndex].img}`; 
             let petName = petCards[i].getElementsByTagName('p')[0];  //Find name in the card
@@ -122,11 +123,44 @@ loadData()
 
 const popUp = document.querySelector('.friends__popup');
 
-console.log(popUp);
-
 Array.from(petCards).forEach(petCard => petCard.addEventListener('click', openPopup));
 
-function openPopup() {
+function openPopup(event) {
+    let target = event.target; //куда кликнули
+    let value;
+    if (target.tagName !== 'DIV') {
+        const petCard = target.parentNode;
+        value = petCard.getAttribute("data-petname");
+    } else {
+        value = target.getAttribute("data-petname");
+    }
+    
+    const petToShow = pets.find(pet => pet.name === value); //what will be displayed in the card
+
+    let popupPetImage = popUp.getElementsByTagName('img')[0];
+    popupPetImage.src = petToShow.img;
+
+    let popupPetName = popUp.getElementsByClassName('friends__popup--title')[0];
+    popupPetName.innerHTML = petToShow.name;
+
+    let popupPetBreed = popUp.getElementsByClassName('friends__popup--subtitle')[0];
+    popupPetBreed.innerHTML = `${petToShow.type} - ${petToShow.breed}`;
+
+    let popupPetDesc = popUp.getElementsByClassName('friends__popup--description')[0];
+    popupPetDesc.innerHTML = petToShow.description;
+
+    let popupPetAge = popUp.querySelector("[data-property='age']");
+    popupPetAge.innerHTML = petToShow.age;
+
+    let popupPetInoculations = popUp.querySelector("[data-property='inoculations']");
+    popupPetInoculations.innerHTML = petToShow.inoculations;
+
+    let popupPetDiseases = popUp.querySelector("[data-property='diseases']");
+    popupPetDiseases.innerHTML = petToShow.diseases;
+
+    let popupPetParasites = popUp.querySelector("[data-property='parasites']");
+    popupPetParasites.innerHTML = petToShow.parasites;
+
     popUp.classList.add('_active');
     document.body.classList.add('_lock');
 };
