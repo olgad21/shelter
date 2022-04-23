@@ -132,6 +132,7 @@ function openPopup() {
 };
 
 document.querySelector('.friends__popup__area').addEventListener('click', closePopup);
+document.querySelector('.friends__popup--close').addEventListener('click', closePopup);
 
 function closePopup() {
     popUp.classList.remove('_active');
