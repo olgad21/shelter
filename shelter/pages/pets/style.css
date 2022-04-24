@@ -261,6 +261,11 @@ main {
   justify-content: center;
 }
 
+.our-pets__slider--circle--counter,
+.our-pets__slider--counter {
+  pointer-events: none;
+}
+
 .disabled {
   border-color: #CDCDCD;
   color: #CDCDCD;
@@ -297,7 +302,6 @@ main {
 
 .our-pets__slider--counter {
   color: #292929;
-  cursor: pointer;
   transition: 0.6s ease;
   font-size: 20px;
   font-family: 'Tinos', serif;
