@@ -200,4 +200,58 @@ function openFirstSlide() {
     }
 }
 
+//Create popup
+
+const popUp = document.querySelector('.friends__popup');
+
+Array.from(petCards).forEach(petCard => petCard.addEventListener('click', openPopup));
+
+function openPopup(event) {
+    let target = event.target; //куда кликнули
+    let value;
+    if (target.tagName !== 'DIV') {
+        const petCard = target.parentNode;
+        value = petCard.getAttribute("data-petname");
+    } else {
+        value = target.getAttribute("data-petname");
+    }
+    
+    const petToShow = pets.find(pet => pet.name === value); //what will be displayed in the card
+
+    let popupPetImage = popUp.getElementsByTagName('img')[0];
+    popupPetImage.src = petToShow.img;
+
+    let popupPetName = popUp.getElementsByClassName('friends__popup--title')[0];
+    popupPetName.innerHTML = petToShow.name;
+
+    let popupPetBreed = popUp.getElementsByClassName('friends__popup--subtitle')[0];
+    popupPetBreed.innerHTML = `${petToShow.type} - ${petToShow.breed}`;
+
+    let popupPetDesc = popUp.getElementsByClassName('friends__popup--description')[0];
+    popupPetDesc.innerHTML = petToShow.description;
+
+    let popupPetAge = popUp.querySelector("[data-property='age']");
+    popupPetAge.innerHTML = petToShow.age;
+
+    let popupPetInoculations = popUp.querySelector("[data-property='inoculations']");
+    popupPetInoculations.innerHTML = petToShow.inoculations;
+
+    let popupPetDiseases = popUp.querySelector("[data-property='diseases']");
+    popupPetDiseases.innerHTML = petToShow.diseases;
+
+    let popupPetParasites = popUp.querySelector("[data-property='parasites']");
+    popupPetParasites.innerHTML = petToShow.parasites;
+
+    popUp.classList.add('_active');
+    document.body.classList.add('_lock');
+};
+
+document.querySelector('.friends__popup__area').addEventListener('click', closePopup);
+document.querySelector('.friends__popup--close').addEventListener('click', closePopup);
+
+function closePopup() {
+    popUp.classList.remove('_active');
+    document.body.classList.remove('_lock');
+}
+
 

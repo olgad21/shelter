@@ -303,11 +303,6 @@ body._lock {
     animation-duration: 0.1s;
   }
 
-  .friends__card:hover {
-    background-color: #F6F6F6;
-    animation-duration: 0.3s;
-  }
-
   .friends__card:hover .friends__card--button{
     background: #FDDCC4;
     border-color: #FDDCC4;
@@ -315,6 +310,8 @@ body._lock {
 
   .friends__card:hover {
     cursor: pointer;
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.05);
+    animation-duration: 0.3s;
   }
 
   .friends__card--name {
@@ -981,7 +978,8 @@ body._lock {
       background-color: #292929;
       z-index: 20;
       padding: 256px 38px 0;
-      transform: translate(-3000%, -3000%);
+      transform: translate(300%, 0);
+      transition: transform 0.5s ease-in-out;
     }
 
 
@@ -1011,6 +1009,7 @@ body._lock {
       cursor: pointer; 
       z-index: 21;
       margin-left: 43px;
+      transition: transform 0.5s ease-in-out;
     }
 
     .header__burger._active {

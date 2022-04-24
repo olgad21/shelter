@@ -99,12 +99,15 @@ function getUndisplayedCards() {
 const btnLeft = document.querySelector('.friends__slider--circle-left');
 const btnRight = document.querySelector('.friends__slider--circle-right');
 
+const carousel = document.querySelector('.friends__carousel');
+
 btnLeft.addEventListener('click', moveLeft);
 btnRight.addEventListener('click', moveRight);
 
 function moveLeft() {
     const nextSlides = getUndisplayedCards();
     generateImages(nextSlides);
+    // carousel.classList.add('slide-in');
 }
 
 function moveRight() {
