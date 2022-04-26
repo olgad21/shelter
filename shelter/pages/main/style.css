@@ -519,13 +519,13 @@ body._lock {
 }
 
 .friends__popup--close:hover,
-.friends__popup__area:hover {
-  cursor: pointer;
+.friends__popup__area:hover + .friends__popup--body > .friends__popup--close {
+  background-color: rgba(0, 0, 0, 0.233);
 }
 
 .friends__popup--close:hover,
-.friends__popup__area:hover .friends__popup--close{ 
-  background-color: rgba(0, 0, 0, 0.233);
+.friends__popup__area:hover {
+  cursor: pointer;
 }
 
 .friends__popup--close-x {
