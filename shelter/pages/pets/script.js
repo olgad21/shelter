@@ -90,7 +90,7 @@ function getPetsForPage(){
     allPetsDivided.forEach(set => shuffleArray(set));
   }
 
-//   console.log(allPetsDivided, 'массив с массивами');
+  console.log(allPetsDivided.length, 'массив с массивами');
 }
 
 
@@ -105,8 +105,8 @@ function getPetsForPage(){
 
 function generateImages(allPetsDivided, slideIndex) {
     // shuffleArray(allPetsDivided[slideIndex]);
-    console.log(allPetsDivided);
-    for (let i = 0; i < petCards.length; i++) {
+    for (let i = 0; i < allPetsDivided[0].length; i++) {
+        console.log(allPetsDivided[slideIndex], slideIndex, petCards.length)
         petCards[i].dataset.petname = allPetsDivided[slideIndex][i].name; //add data attribute to each card
         let petImage = petCards[i].getElementsByTagName('img')[0]; //Find image in the card
         petImage.src = allPetsDivided[slideIndex][i].img; 
